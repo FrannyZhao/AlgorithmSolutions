@@ -11,6 +11,10 @@ public class JiuZhangChapterOneTest {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		String source = "";
+		String target = "";
+		System.out.println("result="+solution.strStr(source,target));
+		
 		S.add(4); S.add(1); S.add(0); S.add(0);
 		/*
 		for (int i = 0; i < 3; i++) {

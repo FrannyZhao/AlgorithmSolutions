@@ -4,7 +4,38 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class JiuZhangChapterOneSolutions {
-
+	
+	/*
+	 * Output the first index(from 0) of target string in source string.
+	 * If target does not exist in source, return -1.
+	 */
+	public int strStr(String source, String target) {
+		int i = -1;
+		int j;
+        if (source != null && target != null) {
+            if (source.equals(target)) {
+        		return 0;
+        	}
+            for (i = 0; i < source.length(); i++) {
+            	if ( (i + target.length()) <= source.length()) {
+            		for (j = 0; j < target.length(); j++) {
+                        if (source.charAt(i+j) == target.charAt(j)) {
+                            continue;
+                        } else {
+                            break;
+                        }
+            		}
+            		if (j == target.length()) {
+            		    return i;
+            		}
+            	} else {
+            		return -1;
+            	}
+            }
+        }
+        return -1;
+    }
+	
 	/*
 	 *  use recursion
 	 */
