@@ -23,10 +23,15 @@ public class JiuZhangChapterTwoTest {
     int target2 = 8;
     System.out.println("search range result: " + solution.searchRange(A, target2));
     */
-    
+    /*
     int[] A2 = new int[]{5, 7, 8, 10, 11};
     int target3 = 1;
-    System.out.println(""+solution.searchInsert(A2, target3));
+    System.out.println("search insert result: "+solution.searchInsert(A2, target3));
+    */
+    
+    int[] A3 = new int[]{1, 2, 1, 3, 4, 5, 7, 6};
+    System.out.println("find peak result: "+solution.findPeak(A3));
+    
   }
 
 }

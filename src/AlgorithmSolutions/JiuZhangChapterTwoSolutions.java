@@ -160,4 +160,73 @@ public class JiuZhangChapterTwoSolutions {
     }
     return -1;
   }
+  
+  /*
+  /**
+   * @param n: An integers.
+   * @return: An integer which is the first bad version.
+   
+  public int findFirstBadVersion(int n) {
+    int start = 1;
+    int end = n;
+    while (start + 1 < end) {
+        int mid = start + (end - start) / 2;
+        if (VersionControl.isBadVersion(mid)) {
+            end = mid;
+        } else { // VersionControl.isBadVersion(mid) == false
+            start = mid;
+        }
+    }
+    if (VersionControl.isBadVersion(start)) {
+        return start;
+    } else {
+        return end;
+    }
+  }
+  */
+  
+  /**
+   * @param A: An integers array which has the following features:
+   * 1. The numbers in adjacent positions are different.
+   * 2. A[0] < A[1] && A[A.length - 2] > A[A.length - 1].
+   * @return: return any of peek positions P if A[P] > A[P-1] && A[P] > A[P+1].
+   */
+  public int findPeak(int[] A) {
+    int start = 0; int end = A.length - 1;
+    while (start + 1 < end) {
+      int mid = start + (end - start) / 2;
+      if (A[mid] > A[mid-1] && A[mid] > A[mid+1]) {
+        return mid;
+      } else if (A[mid] > A[mid-1] && A[mid] < A[mid+1]) { // ascending
+        start = mid;
+      } else if (A[mid] < A[mid-1] && A[mid] > A[mid+1]) { // descending
+        end = mid;
+      } else if (A[mid] < A[mid-1] && A[mid] < A[mid+1]) { // bottom point
+        end = mid;
+      }
+    }
+    return -1;
+  }
+  
+  /*
+   * another method to find peak
+   */
+  public int findPeak2(int[] A) {
+    int start = 1; int end = A.length - 2; // avoid out of range
+    while (start + 1 < end) {
+      int mid = start + (end - start) / 2;
+      if (A[mid] < A[mid-1]) { // descending
+        end = mid;
+      } else if (A[mid] < A[mid+1]) { // ascending
+        start = mid;
+      } else { // bottom
+        end = mid;
+      }
+    }
+    if (A[start] < A[end]) {
+      return end;
+    } else {
+      return start;
+    }
+  }
 }
