@@ -28,9 +28,20 @@ public class JiuZhangChapterTwoTest {
     int target3 = 1;
     System.out.println("search insert result: "+solution.searchInsert(A2, target3));
     */
-    
+    /*
     int[] A3 = new int[]{1, 2, 1, 3, 4, 5, 7, 6};
     System.out.println("find peak result: "+solution.findPeak(A3));
+    */
+    /*
+    ArrayList<Integer> nums =  new ArrayList<Integer>();
+    nums.add(4);
+    nums.add(5);
+    nums.add(1);
+    nums.add(2);
+    nums.add(3);
+    solution.recoverRotatedSortedArray(nums);
+    System.out.println("recovered rotated sorted array is "+nums);
+    */
     
   }
 
