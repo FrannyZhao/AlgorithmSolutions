@@ -2,11 +2,11 @@ package AlgorithmSolutions;
 
 import java.util.ArrayList;
 
-public class JiuZhangChapterTwoTest {
-  private static JiuZhangChapterTwoSolutions solution = new JiuZhangChapterTwoSolutions();
+public class JZC2BinarySearchTest {
+    private static JZC2BinarySearchSolutions solution = new JZC2BinarySearchSolutions();
 
-  public static void main(String[] args) {
-    
+    public static void main(String[] args) {
+
     /*
     int[] nums = new int[]{1, 2, 3, 3, 4, 5, 10};
     int target = 6;
@@ -42,6 +42,15 @@ public class JiuZhangChapterTwoTest {
     solution.recoverRotatedSortedArray(nums);
     System.out.println("recovered rotated sorted array is "+nums);
     */
+	
+	System.out.println(solution.sqrt(0));
+	System.out.println(solution.sqrt(1));
+	System.out.println(solution.sqrt(3));
+	System.out.println(solution.sqrt(4));
+	System.out.println(solution.sqrt(5));
+	System.out.println(solution.sqrt(10));
+	System.out.println(solution.sqrt(999999999));
+	
     
   }
 
